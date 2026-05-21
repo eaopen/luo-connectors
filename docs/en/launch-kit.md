@@ -46,14 +46,19 @@ Paths:
 
 ## 5. Free promotion sequence
 
-1. Publish Quickstart first (developer audience)
+### Wave 1: Quickstart (developer audience)
 - Put `https://luo.openea.site/quickstart` in README, homepage, and social bio.
+- Success bar: users can copy curl and receive `version/anchor/chinese_lunar/meta`.
+- Channels: GitHub README, developer forums, short technical posts.
 
-2. Publish Obsidian scenario next (creator audience)
+### Wave 2: Obsidian scenario (creator audience)
 - Show one short GIF: command -> today block -> ICS export.
+- Success bar: users can create a Luo block inside Daily Notes.
+- Channels: Obsidian communities, productivity groups, personal blog.
 
-3. Publish Skill scenario last (AI workflow audience)
+### Wave 3: Skill scenario (AI workflow audience)
 - Share one standard prompt that outputs summary + JSON.
+- Success bar: agents consistently emit GCA-v1 without pretending P2/P3 fields are complete.
 
 ## 6. Social post templates
 
@@ -84,4 +89,4 @@ Paths:
 - `https://intl-luo.openea.site/` returns 200
 - `https://api-luo.openea.site/v1/day/2026-03-20` returns 200
 
-Run promotion only after all four checks pass.
+Run promotion only after all four checks pass. The Badge endpoint is an optional claim; include it in public copy only after `/v1/badge/today` or `/v1/badge/day/{YYYY-MM-DD}` returns `image/svg+xml`.

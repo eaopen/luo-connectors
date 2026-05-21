@@ -1,7 +1,7 @@
 {
   "name": "luo-connectors",
   "version": "1.0.0",
-  "description": "洛律 (Luo Rhythm) Connectors - Open source plugins and connectors for calendar integration",
+  "description": "Luo Rhythm public connect hub for Workers API, CLI, skills, and integration docs",
   "main": "README.md",
   "repository": {
     "type": "git",
@@ -12,17 +12,18 @@
     "lunar",
     "solar-terms",
     "obsidian",
-    "notion",
-    "home-assistant",
+    "api",
+    "workers",
+    "agent-skills",
     "cli"
   ],
   "author": "Bobo",
   "license": "MIT",
   "scripts": {
-    "dev": "node -e \"console.log('luo-connectors: 当前仓库仅包含规划文档，暂无可运行代码')\"",
-    "build": "node -e \"console.log('luo-connectors: 当前仓库仅包含规划文档，暂无可运行代码')\"",
-    "test": "node -e \"console.log('luo-connectors: 当前仓库仅包含规划文档，暂无可运行代码')\"",
-    "lint": "node -e \"console.log('luo-connectors: 当前仓库仅包含规划文档，暂无可运行代码')\""
+    "dev": "npm --prefix cal-workers run dev",
+    "build": "npm --prefix cal-workers run typecheck",
+    "test": "npm --prefix cal-workers run test -- --run && npm --prefix cli test",
+    "lint": "npm --prefix cal-workers run typecheck"
   },
   "devDependencies": {
     "typescript": "^5.0.0",

@@ -89,7 +89,8 @@ node cli/src/index.js day 2026-03-20 --solar-term-times
 ## Release cadence
 
 - Target: ship v1 within 24 hours, then iterate daily / hourly
-- v1 includes Cloudflare Workers API
+- Current v1 baseline includes Workers API, CLI, zh/intl skills, and the standalone Obsidian entrypoint.
+- Notion, Raycast/Alfred, Home Assistant, long-lived calendar subscriptions, and public Badge promotion remain roadmap or post-deploy validation items.
 
 ## Requirements
 

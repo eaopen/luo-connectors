@@ -46,14 +46,19 @@ curl "https://api-luo.openea.site/v1/day/2026-03-20?include=solar-term-times"
 
 ## 5. 免费推广动作（优先级从高到低）
 
-1. 先发 Quickstart（技术用户）
+### 第一波：Quickstart（技术用户）
 - 在 README、产品主页、社媒简介都挂 `https://luo.openea.site/quickstart`
+- 成功标准：用户能复制 curl 并拿到 `version/anchor/chinese_lunar/meta`
+- 渠道：GitHub README、V2EX、技术短帖
 
-2. 再发 Obsidian 场景（内容创作者）
+### 第二波：Obsidian 场景（内容创作者）
 - 用 1 张动图展示“命令 -> 今日块 -> ICS 导出”
+- 成功标准：用户能在 Daily Notes 中生成洛律块
+- 渠道：Obsidian 社区、生产力工具群、个人博客
 
-3. 最后发 Skill 场景（AI 工具用户）
+### 第三波：Skill 场景（AI 工具用户）
 - 用 1 段标准提示词展示“直接出 JSON + 日摘要”
+- 成功标准：agent 能稳定按 GCA-v1 输出，不把 P2/P3 字段伪造成已完成
 
 ## 6. 社媒文案模板
 
@@ -84,4 +89,4 @@ curl "https://api-luo.openea.site/v1/day/2026-03-20?include=solar-term-times"
 - `https://intl-luo.openea.site/` 返回 200
 - `https://api-luo.openea.site/v1/day/2026-03-20` 返回 200
 
-满足以上四项后再集中推广，避免冷启动流量浪费。
+满足以上四项后再集中推广，避免冷启动流量浪费。Badge endpoint 属于可选卖点，只有当 `/v1/badge/today` 或 `/v1/badge/day/{YYYY-MM-DD}` 返回 `image/svg+xml` 后才进入公开文案。

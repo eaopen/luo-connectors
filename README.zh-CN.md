@@ -89,7 +89,8 @@ node cli/src/index.js day 2026-03-20 --solar-term-times
 ## 迭代节奏
 
 - 目标：1 天内上线 v1，然后以天 / 小时为单位快速迭代
-- v1 包含 Cloudflare Workers API
+- 当前 v1 基线包含 Workers API、CLI、zh/intl skills，以及独立 Obsidian 插件入口。
+- Notion、Raycast/Alfred、Home Assistant、长期日历订阅和 Badge 公开推广仍属于路线图或部署后验证项。
 
 ## 环境要求
 
