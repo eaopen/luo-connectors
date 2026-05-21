@@ -16,12 +16,14 @@
 
 Acts as the outward-facing hub. Some projects are maintained here, while others are maintained as standalone public repositories.
 
+- Current P1 baseline includes Cloudflare Workers API, CLI, skills, public docs, and the standalone Obsidian plugin.
 - Minimal CLI is now runnable under `cli/` for day/month/year/today queries.
+- Notion, Raycast/Alfred, Home Assistant, and calendar subscription integrations are roadmap items.
 
 ## Release plan
 
 - Target: ship v1 within 24 hours, then iterate daily / hourly
-- v1 includes OpenClaw skill
+- v1 includes Workers API, CLI, OpenClaw/agent skills, and Obsidian plugin entrypoints.
 
 ## Build / Dev
 

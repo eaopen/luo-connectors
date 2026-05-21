@@ -16,12 +16,14 @@
 
 作为对外入口存在；部分项目在本仓库维护，部分项目独立维护。
 
+- 当前 P1 基线包含 Cloudflare Workers API、CLI、skills、公开文档，以及独立维护的 Obsidian 插件。
 - `cli/` 已补齐最小可运行版本，可直接执行 day/month/year/today 查询。
+- Notion、Raycast/Alfred、Home Assistant、日历订阅等属于后续规划项。
 
 ## 迭代计划
 
 - 目标：1 天内上线 v1，然后以天 / 小时为单位快速迭代
-- v1 必包含 OpenClaw skill
+- v1 包含 Workers API、CLI、OpenClaw/agent skills 和 Obsidian 插件入口。
 
 ## 开发/运行
 

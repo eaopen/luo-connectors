@@ -6,20 +6,20 @@ We do not create time. We merely transform five thousand years of stellar moveme
 
 ## Project Overview
 
-`luo-connectors` is the public repository of the Luo Rhythm project, containing all open-source plugins, connectors, and API documentation. This is the "face" of the brand—the part users first encounter and use.
+`luo-connectors` is the public connect hub of Luo Rhythm. It contains the Workers API, minimal CLI, public docs, launch material, and skill definitions. Standalone public projects such as the Obsidian plugin remain conceptually part of this family.
 
 ### Core Features
 
-- **Obsidian Plugin**: Automatically fills Daily Notes with calendar metadata
-- **Notion Integration**: Provides API support for Notion database population
-- **Raycast/Alfred Extension**: Quick query for historical dates and era names
-- **Home Assistant Integration**: Uses solar terms and traditional colors as "environment parameters"
-- **CLI Tool**: Terminal users quickly query calendar information
+- **Cloudflare Workers API**: Serves GCA-v1 day/month/year/badge responses from R2 year packs
+- **CLI Tool**: Queries day/month/year/today data from `api-luo.openea.site`
+- **Skills**: Provides zh/intl calendar skills for agent workflows
+- **Public docs**: Quickstart, launch kit, and GCA-v1 schema
+- **Planned connectors**: Notion, Raycast/Alfred, and Home Assistant are roadmap items, not current P1 deliverables
 
 ### Tech Stack
 
-- **Languages**: TypeScript, JavaScript, Python
-- **Frameworks**: Obsidian Plugin API, Alfred Workflow, HASS Integration
+- **Languages**: TypeScript, JavaScript
+- **Frameworks**: Cloudflare Workers, Node.js CLI
 - **API Integration**: `api-luo.openea.site`
 
 ## Quick Start
@@ -27,11 +27,8 @@ We do not create time. We merely transform five thousand years of stellar moveme
 ### Obsidian Plugin
 
 ```bash
-# Install plugin
-npm install @luo/openea-obsidian
-
-# Or manual installation
-# Download release version, copy to Obsidian plugins directory
+# The Obsidian plugin is maintained as ../luo-obsidian-plugin in this workspace.
+# Build it there, then install the dist files manually while packaging is pending.
 ```
 
 ### CLI Tool
