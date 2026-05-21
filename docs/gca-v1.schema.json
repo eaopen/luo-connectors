@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://luo.openea.site/schemas/gca-v1.schema.json",
+  "title": "GCA-v1 LuoDay",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "version",
+    "anchor",
+    "chinese_lunar",
+    "history",
+    "religious",
+    "synthetic",
+    "meta",
+    "runtime"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "anchor": {
+      "type": "object",
+      "required": ["iso_8601", "jdn", "unix_timestamp", "weekday"],
+      "properties": {
+        "iso_8601": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "jdn": {
+          "type": "number"
+        },
+        "unix_timestamp": {
+          "type": "integer"
+        },
+        "weekday": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7
+        }
+      }
+    },
+    "chinese_lunar": {
+      "type": "object",
+      "required": ["cycle", "animal", "month", "day", "solar_term", "phenology"],
+      "properties": {
+        "cycle": {
+          "type": "string"
+        },
+        "animal": {
+          "type": "string"
+        },
+        "month": {
+          "type": "object",
+          "required": ["name", "is_leap", "alias"]
+        },
+        "day": {
+          "type": "string"
+        },
+        "solar_term": {
+          "type": "object",
+          "required": ["name", "next", "countdown"]
+        },
+        "phenology": {
+          "type": "object",
+          "required": ["pentad", "note"]
+        }
+      }
+    },
+    "history": {
+      "type": "object",
+      "required": ["east_asia", "notable_events", "calendar_transitions"]
+    },
+    "religious": {
+      "type": "object"
+    },
+    "synthetic": {
+      "type": "object"
+    },
+    "meta": {
+      "type": "object",
+      "required": ["aesthetic", "ai_hints", "lifestyle"]
+    },
+    "runtime": {
+      "type": "object",
+      "required": ["region_code", "data_quality", "civil_calendar", "holidays"]
+    },
+    "metadata": {
+      "type": ["object", "null"]
+    }
+  }
+}

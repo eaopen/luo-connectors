@@ -20,7 +20,7 @@ We do not create time. We merely transform five thousand years of stellar moveme
 
 - **Languages**: TypeScript, JavaScript, Python
 - **Frameworks**: Obsidian Plugin API, Alfred Workflow, HASS Integration
-- **API Integration**: `api.luo.openea.site`
+- **API Integration**: `api-luo.openea.site`
 
 ## Quick Start
 
@@ -50,12 +50,17 @@ luo date 2026-03-19
 ### API Usage
 
 ```bash
-# Get today's calendar data
-curl https://api.luo.openea.site/v1/day
-
 # Get specific date
-curl https://api.luo.openea.site/v1/day?date=2026-03-19
+curl https://api-luo.openea.site/v1/day/2026-03-19
+
+# Get specific month
+curl https://api-luo.openea.site/v1/month/2026-03
+
+# Get specific year
+curl https://api-luo.openea.site/v1/year/2026
 ```
+
+GCA-v1 schema: [docs/gca-v1.schema.json](docs/gca-v1.schema.json)
 
 ## Contributing Guidelines
 

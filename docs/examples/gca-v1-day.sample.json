@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "anchor": {
+    "iso_8601": "2026-03-20",
+    "jdn": 2461119.5,
+    "unix_timestamp": 1773964800,
+    "weekday": 5
+  },
+  "chinese_lunar": {
+    "cycle": "丙午",
+    "animal": "马",
+    "month": {
+      "name": "二月",
+      "is_leap": false,
+      "alias": "仲春"
+    },
+    "day": "初二",
+    "solar_term": {
+      "name": "春分",
+      "next": "清明",
+      "countdown": 0
+    },
+    "phenology": {
+      "pentad": "玄鸟至",
+      "note": null
+    }
+  },
+  "history": {
+    "east_asia": [],
+    "notable_events": [],
+    "calendar_transitions": []
+  },
+  "religious": {
+    "orthodox": null,
+    "hebrew": null,
+    "indian": null,
+    "islamic": null
+  },
+  "synthetic": {
+    "french_republican": null,
+    "mayan": null,
+    "holocene": "12026-03-20"
+  },
+  "meta": {
+    "aesthetic": {
+      "traditional_color": {
+        "name": "天青",
+        "hex": "#87B8DE"
+      },
+      "visual_keywords": "minimalist peach blossom zen",
+      "font_suggestion": "Zhi Mang Xing"
+    },
+    "ai_hints": {
+      "system_prompt": "Today is 春分. Keep the tone clear, restrained, and seasonal.",
+      "generation_prompt": "Chinese ink style, 春分, 天青 palette."
+    },
+    "lifestyle": {
+      "suit": ["祭祀"],
+      "avoid": ["嫁娶"]
+    }
+  },
+  "runtime": {
+    "region_code": "CN",
+    "data_quality": "PRECISE",
+    "civil_calendar": {
+      "system": "gregorian",
+      "display_date": "2026-03-20"
+    },
+    "holidays": []
+  }
+}

@@ -1,6 +1,6 @@
 # luo-connectors Overview
 
-`luo-connectors` is the public integration layer of Luo Rhythm.
+`luo-connectors` is the public connect hub of Luo Rhythm.
 
 ## Brand
 
@@ -9,12 +9,14 @@
 
 ## Scope
 
-- Plugins and connectors (Obsidian, Notion, CLI, etc.)
-- Public-facing documentation for integrations
+- Public-facing documentation and entrypoints for integrations
+- Links to standalone or in-repo public connection projects
 
 ## Status
 
-Planning and scaffolding only.
+Acts as the outward-facing hub. Some projects are maintained here, while others are maintained as standalone public repositories.
+
+- Minimal CLI is now runnable under `cli/` for day/month/year/today queries.
 
 ## Release plan
 
@@ -27,9 +29,19 @@ Requirements:
 
 - Node.js 18+
 
+This package primarily serves as a documentation and entry hub.
+
+CLI quick run:
+
 ```bash
-npm run dev
+node cli/src/index.js today
+node cli/src/index.js day 2026-03-20 --solar-term-times
 ```
+
+## Quickstart
+
+- Quickstart: `docs/en/quickstart.md`
+- Launch Kit: `docs/en/launch-kit.md`
 
 ## License
 

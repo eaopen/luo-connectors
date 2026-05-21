@@ -1,0 +1,23 @@
+{
+  "name": "@luo/openea-cli",
+  "version": "0.1.0",
+  "description": "Luo Rhythm minimal CLI for day/month/year calendar API queries",
+  "type": "module",
+  "bin": {
+    "luo": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "node --test ./src/index.test.js"
+  },
+  "keywords": [
+    "luo",
+    "calendar",
+    "cli",
+    "gca"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

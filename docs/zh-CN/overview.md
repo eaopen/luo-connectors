@@ -1,6 +1,6 @@
 # luo-connectors 项目概览
 
-`luo-connectors` 是洛律（Luo Rhythm）的公开集成层。
+`luo-connectors` 是洛律（Luo Rhythm）的对外 connect 总入口。
 
 ## 品牌
 
@@ -9,12 +9,14 @@
 
 ## 职责边界
 
-- 插件与连接器（如 Obsidian、Notion、CLI 等）
-- 面向集成方/用户的公开文档
+- 面向集成方与用户的公开文档、入口说明
+- 指向独立或仓内维护的公开连接项目
 
 ## 当前状态
 
-规划与骨架阶段，暂无可运行实现。
+作为对外入口存在；部分项目在本仓库维护，部分项目独立维护。
+
+- `cli/` 已补齐最小可运行版本，可直接执行 day/month/year/today 查询。
 
 ## 迭代计划
 
@@ -27,9 +29,19 @@
 
 - Node.js 18+
 
+本包主要承担文档与入口说明职责。
+
+CLI 快速运行：
+
 ```bash
-npm run dev
+node cli/src/index.js today
+node cli/src/index.js day 2026-03-20 --solar-term-times
 ```
+
+## 快速上手
+
+- 快速开始：`docs/zh-CN/quickstart.md`
+- 推广准备包：`docs/zh-CN/launch-kit.md`
 
 ## 许可证
 
