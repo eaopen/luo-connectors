@@ -1,3 +1,5 @@
+> **维护状态（2026-11-06）**：独立 Luo 暂停迭代。有价值的岁时功能已迁入 [WorldDesk](https://github.com/CoBeing/worlddesk)，今后在那里维护。本仓库保留历史实现；现有部署未关闭。
+
 # luo-connectors
 
 English version: [README.md](README.md)。

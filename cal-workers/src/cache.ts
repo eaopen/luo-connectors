@@ -5,7 +5,7 @@
 /**
  * Cache key prefix
  */
-const CACHE_PREFIX = 'luo:';
+const CACHE_PREFIX = 'luo:v2:';
 
 /**
  * Generate cache key
@@ -25,14 +25,14 @@ export async function getCachedData(
   if (!cache) return null;
 
   const cacheKey = getCacheKey(scope, key);
-  const cached = await cache.get(cacheKey);
-
-  if (!cached) return null;
-
   try {
-    return JSON.parse(cached);
+    const cached = await cache.get(cacheKey);
+    if (!cached) return null;
+    const parsed: unknown = JSON.parse(cached);
+    return parsed && typeof parsed === 'object' ? parsed : null;
   } catch {
-    return cached;
+    // Optional cache failures must not prevent reading authoritative R2 data.
+    return null;
   }
 }
 
@@ -51,9 +51,11 @@ export async function setCachedData(
   const cacheKey = getCacheKey(scope, key);
   const value = typeof data === 'string' ? data : JSON.stringify(data);
 
-  await cache.put(cacheKey, value, {
-    expirationTtl: ttlSeconds,
-  });
+  try {
+    await cache.put(cacheKey, value, { expirationTtl: ttlSeconds });
+  } catch {
+    // A failed cache fill must not fail an otherwise successful response.
+  }
 }
 
 /**

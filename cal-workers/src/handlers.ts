@@ -550,7 +550,7 @@ export async function handleDayRequest(
       status: 200,
       headers: {
         ...getResponseHeaders(),
-        ...getCacheHeaders(31536000), // 1 year cache for R2 data
+        ...getCacheHeaders(cacheTTL),
       },
     });
   } catch (error) {
@@ -602,7 +602,7 @@ export async function handleMonthRequest(
       status: 200,
       headers: {
         ...getResponseHeaders(),
-        ...getCacheHeaders(31536000),
+        ...getCacheHeaders(cacheTTL),
       },
     });
   } catch (error) {
@@ -619,7 +619,7 @@ export async function handleYearRequest(
   try {
     const includePreciseSolarTermTimes = shouldIncludePreciseSolarTermTimes(request);
     const cacheKey = includePreciseSolarTermTimes ? `${year}?include=solar-term-times` : year;
-    const cacheTTL = 31536000;
+    const cacheTTL = 86400;
     const cached = await getCachedData(env.CACHE, 'year', cacheKey);
 
     if (cached) {

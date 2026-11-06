@@ -457,8 +457,8 @@ R2 中的 `calendar-{year}.json(.gz)` 现已切换为年包分发格式：
 
 ```http
 Content-Type: application/json; charset=utf-8
-Cache-Control: public, max-age=31536000, s-maxage=31536000
-CDN-Cache-Control: public, max-age=31536000
+Cache-Control: public, max-age=86400, s-maxage=31536000
+CDN-Cache-Control: public, max-age=86400
 Access-Control-Allow-Origin: *
 X-Cache: MISS
 ```
@@ -597,7 +597,7 @@ namespace_id = "luo_cache"
 ```
 请求 → Workers → R2 → 响应
     ↓
-  Cache-Control: public, max-age=31536000 (1 年)
+  Cache-Control: public, max-age=86400 (示例：历史日数据 1 天)
 ```
 
 ### KV 缓存（可选）
@@ -658,3 +658,7 @@ MIT License
 - [Cloudflare Workers 文档](https://developers.cloudflare.com/workers)
 - [R2 存储文档](https://developers.cloudflare.com/r2)
 - [Obsidian 插件](https://github.com/openea/luo-obsidian-plugin)
+
+## 缓存可靠性（2026-11-06）
+
+KV 为可选加速层，读取失败或损坏数据回退 R2，写入失败不改变成功响应。日/月响应命中与未命中采用相同 TTL；年响应 TTL 为一天。缓存键前缀为 `luo:v2:`。旧客户端/CDN 的一年缓存不会由代码更新自动清除，部署时需要单独处理。

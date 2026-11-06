@@ -5,7 +5,7 @@
   "main": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openea/luo-connectors.git"
+    "url": "https://github.com/eaopen/luo-connectors.git"
   },
   "keywords": [
     "calendar",
